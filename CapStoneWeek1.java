@@ -32,29 +32,29 @@ public class CapStoneWeek1 {
 	}
 
 	public static String translateToPigLatin(String string) {   //  This is  where the words are translated based on what the index of the vowel is
-		String end = "";
+		String translate = "";
 		String spacing = "\\s+";
 		String[] words = string.split(spacing);
 		for (int i = 0; i < words.length; i++) {
 			if (vowelChecker(words[i].charAt(0))) {             
-				end += words[i] + "way";
+				translate += words[i] + "way";
 			} else if (vowelChecker(words[i].charAt(1))) {
-				end += words[i].substring(1) + words[i].substring(0, 1) + "ay";
+				translate += words[i].substring(1) + words[i].substring(0, 1) + "ay";
 			} else if (vowelChecker(words[i].charAt(2))) {
-				end += words[i].substring(2) + words[i].substring(0, 2) + "ay";
+				translate += words[i].substring(2) + words[i].substring(0, 2) + "ay";
 			} else if (vowelChecker(words[i].charAt(3))) {
-				end += words[i].substring(3) + words[i].substring(0, 3) + "ay";
+				translate += words[i].substring(3) + words[i].substring(0, 3) + "ay";
 			} else if (vowelChecker(words[i].charAt(4))) {
-				end += words[i].substring(4) + words[i].substring(0, 4) + "ay";
+				translate += words[i].substring(4) + words[i].substring(0, 4) + "ay";
 			} else if (vowelChecker(words[i].charAt(5))) {
-				end += words[i].substring(5) + words[i].substring(0, 5) + "ay";
+				translate += words[i].substring(5) + words[i].substring(0, 5) + "ay";
 			} else {
 
-				end += words[i] + "way";
+				translate += words[i] + "way";
 			}
 
 		}
-		return end;
+		return translate;
 
 	}
 
